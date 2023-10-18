@@ -1,0 +1,17 @@
+$color-main-bg: #FFFAF3;
+$color-circle-bg: #D4DCB2;
+$color-text: #000000;
+$color-white: #fff;
+
+$font-family-raleway: 'Raleway', sans-serif;
+$font-family-cormorant-gramond: 'Cormorant Garamond', serif;
+$font-family-cormorant-sc: 'Cormorant SC', serif;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);

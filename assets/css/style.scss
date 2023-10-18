@@ -1,0 +1,1117 @@
+@import "variables";
+@import "breakpoints";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&family=Cormorant+SC:wght@300;400&family=Raleway:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: $font-family-raleway;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body {
+  background-color: $color-main-bg;
+  min-height: 100vh;
+}
+
+.dropdown-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.container {
+  max-width: 123rem;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+.button-bordered {
+  outline: none;
+  text-decoration: none;
+
+  color: $color-text;
+  padding: 1.3rem 2.6rem;
+  border: 1px solid $color-text;
+  background: transparent;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .15s ease-in-out;
+
+  &:hover {
+    background-color: $color-text;
+    transition: .3s ease-in-out;
+    color: $color-main-bg;
+  }
+}
+
+.header {
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 150%;
+    color: $color-text;
+    text-decoration: none;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+      visibility: visible;
+    }
+  }
+
+  &__phone {
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: $color-text;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+      visibility: visible;
+    }
+  }
+}
+
+.main {
+  margin-top: 4rem;
+}
+
+.hero {
+  position: relative;
+
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    width: 33.5rem;
+    height: 33.5rem;
+    border-radius: 33.5rem;
+    background-color: #E3EBC1;
+    filter: blur(12.5rem);
+    z-index: -99;
+  }
+
+  &::before {
+    left: -10%;
+    top: 0;
+  }
+
+  &::after {
+    bottom: -5%;
+    right: -5%;
+  }
+
+  &__image {
+    position: absolute;
+    width: 62.3rem;
+    height: 64.1rem;
+    right: 0;
+    bottom: -4%;
+    z-index: -1;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+  &__desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $color-text;
+    line-height: 150%;
+  }
+
+  &__title {
+    margin-top: 1rem;
+    font-size: 8rem;
+    font-family: $font-family-cormorant-gramond;
+    font-weight: 300;
+    font-style: italic;
+    span {
+      font-family: $font-family-cormorant-sc;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 8rem
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 6rem;
+
+      span {
+        font-size: 6rem;
+      }
+    }
+  }
+
+  &__actions {
+    margin-top: 7rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $color-text;
+  }
+
+  &__preview {
+    margin-top: 11.5rem;
+    display: flex;
+    gap: 2.7rem;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+
+    img {
+      width: 16rem;
+      height: 16rem;
+    }
+  }
+}
+
+.stats {
+  margin: 15rem 0 10rem;
+
+  &__list {
+    display: flex;
+    gap: 11rem;
+    justify-content: center;
+
+    @include media-breakpoint-down(lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    max-width: 21rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 150%;
+
+    span {
+      line-height: 150%;
+      font-size: 7.2rem;
+      font-family: $font-family-cormorant-gramond;
+    }
+  }
+}
+
+.discount {
+  padding: 10rem 0;
+
+  .blank-2 {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 6.2rem 6rem;
+
+    background-image: url("../img/discount-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50rem;
+      padding: 6.8rem 7.2rem;
+      background: rgba(255, 255, 255, 0.01);
+      backdrop-filter: blur(3rem);
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 4.8rem;
+      font-family: $font-family-cormorant-gramond;
+      color: $color-white;
+    }
+
+    &__link {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 150%;
+      color: $color-white;
+    }
+  }
+
+  .blank-1 {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6.8rem 7.2rem;
+    height: 100%;
+    background-image: url("../img/discount-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__container {
+      width: 50rem;
+      padding: 3rem 4.9rem;
+      background: rgba(255, 255, 255, 0.01);
+      backdrop-filter: blur(3rem);
+    }
+    &__title {
+      font-size: 4.8rem;
+      font-family: $font-family-cormorant-gramond;
+      color: $color-text;
+    }
+
+    &__description {
+      font-weight: 300;
+      font-size: 1.8rem;
+      color: $color-text;
+      line-height: 150%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__link {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: $color-text;
+    }
+  }
+
+  &__wrapper {
+    padding-bottom: 6.3rem;
+  }
+
+  &__pagination {
+    bottom: 0 !important;
+    z-index: 99;
+
+    .swiper-pagination-bullet {
+      background: transparent;
+      border: 1px solid $color-text;
+      width: 1.3rem;
+      height: 1.3rem;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #9DA57C;
+      border: none;
+    }
+  }
+
+  &__slide {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.services {
+  position: relative;
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+  &__title {
+    text-align: center;
+    font-family: $font-family-cormorant-gramond;
+    font-size: 7.2rem;
+    color: $color-text;
+  }
+
+  &__categories {
+    margin-top: 5rem;
+    display: flex;
+    gap: 9.5rem;
+
+    @include media-breakpoint-down(lg) {
+      flex-wrap: wrap;
+      row-gap: 2rem;
+      justify-content: center;
+    }
+  }
+
+  &__category {
+    position: relative;
+    cursor: pointer;
+    font-family: $font-family-cormorant-gramond;
+    font-size: 3.6rem;
+    color: $color-text;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: .2rem;
+      left: 0;
+      bottom: -1rem;
+      background-color: #9DA57C;
+      transition: .3s all ease-in-out;
+    }
+
+    &-active::before, &:hover::before {
+      width: 100%;
+      transition: .3s all ease-in-out;
+    }
+  }
+
+  .service {
+    position: relative;
+    &-hidden {
+      display: none;
+      visibility: hidden;
+    }
+
+    &__catalog {
+      margin-top: 3rem;
+      max-width: 58rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-left: 10rem;
+      margin: 1rem 0;
+      cursor: pointer;
+    }
+
+    &__item {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 150%;
+      display: flex;
+      justify-content: space-between;
+
+      &-dropdown {
+        cursor: pointer;
+        div {
+          display: flex;
+          justify-content: space-between;
+        }
+        img {
+          transition: .3s all ease-in-out;
+        }
+        &-active img {
+          transition: .3s all ease-in-out;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &__item span, &__item-dropdown div span {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 150%;
+      color: $color-text;
+    }
+
+    &__request {
+      margin-top: 7rem;
+    }
+
+    .service__primary-image {
+      position: absolute;
+      width: 36.2rem;
+      height: 41.6rem;
+      right: 8%;
+      top: 5%;
+      z-index: 99;
+      @include media-breakpoint-down(lg) {
+        display: none;
+        visibility: visible;
+      }
+    }
+
+    .service__secondary-image {
+      position: absolute;
+      right: 0;
+      top: -20%;
+      width: 20.8rem;
+      height: 26.1rem;
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.portfolio {
+  padding: 10rem 0;
+
+  &__title {
+    font-family: $font-family-cormorant-gramond;
+    font-size: 7.2rem;
+    color: $color-text;
+    text-align: center;
+  }
+
+  &__swiper {
+    margin-top: 5rem;
+    overflow: visible !important;
+  }
+
+  .swiper-button-prev {
+    left: -5%;
+    z-index: 99;
+    color: $color-text;
+  }
+
+  .swiper-button-next {
+    right: -5%;
+    z-index: 99;
+    color: $color-text;
+  }
+
+  .swiper-wrapper {
+    padding-bottom: 6.3rem;
+  }
+
+  .swiper-pagination {
+    bottom: 0 !important;
+    z-index: 99;
+
+    .swiper-pagination-bullet {
+      background: transparent;
+      border: 1px solid $color-text;
+      width: 1.3rem;
+      height: 1.3rem;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #9DA57C;
+      border: none;
+    }
+  }
+
+  &__slide {
+    height: auto;
+    flex-grow: 1;
+    img {
+      width: 27rem;
+      height: 36rem;
+    }
+
+    &-instagram {
+      height: auto;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      div {
+        font-family: $font-family-cormorant-gramond;
+        font-size: 3.6rem;
+        text-align: center;
+        color: $color-text;
+        a {
+          font-family: $font-family-cormorant-gramond;
+          font-size: 3.6rem;
+          color: $color-text;
+        }
+      }
+      img {
+        height: 18rem;
+        width: 27rem;
+      }
+    }
+  }
+}
+
+.surprise {
+  padding: 10rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 18rem;
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  &__title {
+    font-family: $font-family-cormorant-gramond;
+    font-size: 7.2rem;
+    color: $color-text;
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    margin-top: 5rem;
+    &, p {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 150%;
+
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 7rem;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+
+    }
+  }
+
+  &__more {
+    color: $color-text;
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+}
+
+.reviews {
+  padding: 10rem 0;
+  display: flex;
+  gap: 3rem;
+  &__image img {
+    width: 46.8rem;
+    height: 67.6rem;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  &__title {
+    div {
+      padding-left: 20rem;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+        text-align: center;
+      }
+    }
+    &, div {
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+      font-family: $font-family-cormorant-gramond;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 7.2rem;
+      color: $color-text;
+
+      span {
+        font-family: $font-family-cormorant-gramond;
+        font-size: 7.2rem;
+        color: $color-text;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    margin-top: 10.7rem;
+  }
+
+  &__public {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $color-text;
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+
+  .review {
+    max-width: 63.2rem;
+    padding: 0 6.6rem 0 7rem;
+    background-image: url("../img/review-quotes.svg");
+    background-repeat: no-repeat;
+
+    &__name {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: $color-text;
+    }
+
+    &__meta {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    &__rating {
+      color: #FCC066;
+      font-size: 1.8rem;
+    }
+
+    &__date {
+      color: $color-text;
+      line-height: 150%;
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+
+    &__text {
+      margin-top: 2rem;
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: $color-text;
+    }
+  }
+}
+
+.location {
+  padding: 10rem 0;
+  &__title {
+    font-family: $font-family-cormorant-gramond;
+    font-size: 7.2rem;
+    color: $color-text;
+    text-align: center;
+  }
+
+  &__list {
+    margin-top: 5rem;
+    display: flex;
+    gap: 8.6rem;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+
+  }
+
+  &__item {
+    position: relative;
+    font-size: 3.6rem;
+    font-family: $font-family-cormorant-gramond;
+    color: $color-text;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #9DA57C;
+      height: .2rem;
+      width: 0%;
+      left: 0;
+      bottom: -1rem;
+      transition: .3s all ease-in-out;
+    }
+
+    &-active::before, &:hover::before {
+      transition: .3s all ease-in-out;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    margin-top: 5rem;
+    display: flex;
+    gap: 3rem;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  }
+
+  &__map {
+    iframe {
+      width: 57rem;
+      height: 41.4rem;
+      border: none;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        height: 50rem;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+    }
+  }
+
+  &__request {
+    max-width: max-content;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: $color-text;
+    line-height: 150%;
+  }
+}
+
+.footer {
+  &__content {
+    padding: 7.4rem 0 5rem;
+    display: grid;
+    grid-template-columns: .5fr 1fr .5fr;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      justify-content: center;
+    }
+  }
+
+  &__socials {
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__links {
+    margin-top: 2.7rem;
+    display: flex;
+    gap: 1.8rem;
+  }
+
+  &__page-list {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    @include media-breakpoint-down(lg) {
+      gap: 10rem;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  &__page a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $color-text;
+    line-height: 150%;
+  }
+
+  &__discounts {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+
+  &__discount {
+    font-family: $font-family-cormorant-gramond;
+    font-size: 3.6rem;
+  }
+
+  &__input {
+    input {
+      width: 100%;
+      padding: 1.2rem 1.4rem;
+      font-size: 1.8rem;
+      line-height: 150%;
+      font-weight: 300;
+      background-color: $color-main-bg;
+      &::placeholder {
+        color: #ABABAB;
+      }
+    }
+  }
+
+  &__privacy {
+    input {
+      width: 1.9rem;
+      height: 1.9rem;
+      background: $color-main-bg;
+    }
+
+    label {
+      margin-left: .8rem;
+    }
+
+    label, label a {
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 150%;
+      color: $color-text;
+    }
+  }
+}
+
+.group {
+  display: flex;
+  gap: 10rem;
+
+  @include media-breakpoint-down(lg) {
+    gap: 2rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__title {
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+    font-family: $font-family-cormorant-gramond;
+    font-size: 7.2rem;
+    color: $color-text;
+  }
+
+  &__description {
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: $color-text;
+    margin-top: 5rem;
+  }
+
+  &__image img {
+    width: 34.4rem;
+  }
+
+  &__cosmetic{
+    @include media-breakpoint-down(md) {
+      display: none;
+      visibility: hidden;
+    }
+
+    margin-top: 3rem;
+
+    img {
+      width: 30rem;
+    }
+  }
+}
+
+.masters {
+  margin-top: 16rem;
+  &__title {
+    text-align: center;
+    font-size: 4.8rem;
+    font-family: $font-family-cormorant-gramond;
+    font-weight: 300;
+    font-style: italic;
+    span {
+      font-family: $font-family-cormorant-sc;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: uppercase;
+      font-size: 4.8rem
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 6rem;
+
+      span {
+        font-size: 6rem;
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+
+    &:hover {
+      .masters__info {
+        visibility: visible;
+        opacity: 1;
+        transition: .3s all ease-in-out;
+      }
+    }
+  }
+
+  &__info {
+    padding: 3.2rem 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-circle-bg;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s all ease-in-out;
+  }
+
+  &__name {
+    font-family: $font-family-cormorant-gramond;
+    font-size: 3.6rem;
+    color: $color-text;
+    text-align: center;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: $color-text;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  &__request {
+    max-width: max-content;
+  }
+
+  &__swiper {
+    margin-top: 5rem;
+    overflow: visible !important;
+  }
+
+  &__wrapper {
+    padding-bottom: 6.3rem;
+  }
+
+
+  &__pagination {
+    bottom: 0 !important;
+    z-index: 99;
+
+    .swiper-pagination-bullet {
+      background: transparent;
+      border: 1px solid $color-text;
+      width: 1.3rem;
+      height: 1.3rem;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #9DA57C;
+      border: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -5%;
+    z-index: 99;
+    color: $color-text;
+  }
+
+  .swiper-button-next {
+    right: -5%;
+    z-index: 99;
+    color: $color-text;
+  }
+}
+
+.studios {
+  padding: 15rem 0 10rem;
+  &__title {
+    font-family: $font-family-cormorant-gramond;
+    font-size: 7.2rem;
+    color: $color-text;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  &__alerts {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  .alert {
+    &__title {
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: $color-text;
+      line-height: 150%;
+    }
+
+    &__description {
+      font-size: 1.8rem;
+      color: $color-text;
+      line-height: 150%;
+      font-weight: 300;
+    }
+  }
+
+  .preview {
+    margin-top: 5rem;
+    height: 82.6rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3rem;
+
+    @include media-breakpoint-down(lg) {
+      height: 62.6rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 49.4rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 29.4rem;
+    }
+    &__image {
+      width: 100%;
+      height: 100%;
+      background-color: #C4C4C4;
+      content: "";
+    }
+
+    &__size-4 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    &__size-2 {
+      grid-column: span 2;
+    }
+  }
+}

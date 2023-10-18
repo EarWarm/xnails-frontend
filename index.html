@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <meta content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, width=device-width" name="viewport">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+<header class="header container">
+    <a class="header__logo" href="index.html"><img alt="Logotype" src="assets/img/logotype.svg"></a>
+    <a class="header__link" href="about.html">О нас</a>
+    <a class="header__link" href="index.html#services">Прайс</a>
+    <a class="header__link" href="index.html#reviews">Отзывы</a>
+    <a class="header__link" href="index.html#locations">Студии</a>
+    <div class="header__phone">+7 (812) 660-50-88</div>
+    <button class="header__request button-bordered">Записаться</button>
+</header>
+
+<main class="main container">
+    <section class="main__hero hero">
+        <img alt="Hero main" class="hero__image" src="assets/img/hero-main.png">
+        <div class="hero__desc">XNAILS - студии маникюра в Санкт-Петербурге</div>
+        <h1 class="hero__title">Мы знаем все о <span>красивом</span><br>и <span>качественном</span><br>покрытии</h1>
+        <div class="hero__actions">
+            <button class="button-bordered">Записаться</button>
+            <a class="hero__price" href="#">Узнать стоимость</a>
+        </div>
+        <div class="hero__preview">
+            <img alt="Preview" src="assets/img/hero-preview-1.png">
+            <img alt="Preview" src="assets/img/hero-preview-2.png">
+            <img alt="Preview" src="assets/img/hero-preview-3.png">
+        </div>
+    </section>
+    <section class="main__stats stats">
+        <ul class="stats__list">
+            <li class="stats__item">
+                <span>4</span>
+                года мы радуем наших клиентов
+            </li>
+
+            <li class="stats__item">
+                <span>10 000+</span>
+                маникюров мы сделали за последний год
+            </li>
+
+            <li class="stats__item">
+                <span>3+</span>
+                наши мастера имеют опыт более 3 лет
+            </li>
+        </ul>
+    </section>
+    <section class="main__discount discount">
+        <div class="discount__swiper swiper">
+            <div class="swiper-wrapper discount__wrapper">
+                <div class="swiper-slide discount__slide">
+                    <div class="discount__blank-1 blank-1">
+                        <div class="blank-1__container">
+                            <div class="blank-1__title">Вместе дешевле!</div>
+                            <div class="blank-1__description">
+                                Расскажите о нас своим подругам, знакомым, коллегам или родственникам.
+                                Друг получает скидку 10% на первый визит, а вы - 10% кэшбэк с его первого визита
+                            </div>
+                            <a class="blank-1__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide discount__slide">
+                    <div class="discount__blank-2 blank-2">
+                        <div class="blank-2__container">
+                            <div class="blank-2__title">Скидка 10%<br>на первый визит</div>
+                            <a class="blank-2__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination discount__pagination"></div>
+        </div>
+    </section>
+    <section class="main__services services" id="services">
+        <div class="services__title">Наши услуги</div>
+        <ul class="services__categories">
+            <li class="services__category services__category-active" data-select-service>Маникюр</li>
+            <li class="services__category" data-select-service>Наращивание</li>
+            <li class="services__category" data-select-service>Педикюр</li>
+            <li class="services__category" data-select-service>Брови</li>
+        </ul>
+        <div class="services__service service" data-service>
+            <img alt="Image" class="service__primary-image" src="assets/img/service-primary-1.png"/>
+            <img alt="Image" class="service__secondary-image" src="assets/img/service-secondary-1.png"/>
+            <ul class="service__catalog">
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Маникюр (аппаратный, комбинированный)</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Покрытие гелем Luxio, oniq</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие + маникюр + Покрытие гелем Luxio, oniq  </span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item-dropdown" data-dropdown>
+                    <div>
+                        <span>Снятие покрытия 1 <img alt="" src="assets/img/arrow.svg"></span>
+                        <span>20-200 ₽</span>
+                    </div>
+                    <ul class="service__dropdown dropdown-hidden" data-dropdown-mark>
+                        <li class="service__item">Матовое покрытие — 100 ₽</li>
+                        <li class="service__item">Френч (1 ноготь) — 50 ₽</li>
+                        <li class="service__item">Лунный (1 ноготь) — 20 ₽</li>
+                        <li class="service__item">Втирка (1 ноготь) — 40 ₽</li>
+                        <li class="service__item">Инкрустация стразами (1 шт.) — 50-300 ₽</li>
+                        <li class="service__item">Дизайн простой — 50-100 ₽</li>
+                        <li class="service__item">Дизайн сложный — 100-300 ₽</li>
+                        <li class="service__item">Градиент — 50 ₽</li>
+                        <li class="service__item">Мрамор — 50 ₽</li>
+                    </ul>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+            </ul>
+            <button class="service__request button-bordered">Записаться</button>
+        </div>
+        <div class="services__service service-hidden" data-service>
+            <img alt="Image" class="service__primary-image" src="assets/img/service-primary-1.png"/>
+            <img alt="Image" class="service__secondary-image" src="assets/img/service-secondary-1.png"/>
+            <ul class="service__catalog">
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Маникюр (аппаратный, комбинированный)</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Покрытие гелем Luxio, oniq</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие + маникюр + Покрытие гелем Luxio, oniq  </span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item-dropdown" data-dropdown>
+                    <div>
+                        <span>Снятие покрытия 2 <img alt="" src="assets/img/arrow.svg"></span>
+                        <span>20-200 ₽</span>
+                    </div>
+                    <ul class="service__dropdown dropdown-hidden" data-dropdown-mark>
+                        <li class="service__item">Матовое покрытие — 100 ₽</li>
+                        <li class="service__item">Френч (1 ноготь) — 50 ₽</li>
+                        <li class="service__item">Лунный (1 ноготь) — 20 ₽</li>
+                        <li class="service__item">Втирка (1 ноготь) — 40 ₽</li>
+                        <li class="service__item">Инкрустация стразами (1 шт.) — 50-300 ₽</li>
+                        <li class="service__item">Дизайн простой — 50-100 ₽</li>
+                        <li class="service__item">Дизайн сложный — 100-300 ₽</li>
+                        <li class="service__item">Градиент — 50 ₽</li>
+                        <li class="service__item">Мрамор — 50 ₽</li>
+                    </ul>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+            </ul>
+            <button class="service__request button-bordered">Записаться</button>
+        </div>
+        <div class="services__service service-hidden" data-service>
+            <img alt="Image" class="service__primary-image" src="assets/img/service-primary-1.png"/>
+            <img alt="Image" class="service__secondary-image" src="assets/img/service-secondary-1.png"/>
+            <ul class="service__catalog">
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Маникюр (аппаратный, комбинированный)</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Покрытие гелем Luxio, oniq</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие + маникюр + Покрытие гелем Luxio, oniq  </span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item-dropdown" data-dropdown>
+                    <div>
+                        <span>Снятие покрытия 3 <img alt="" src="assets/img/arrow.svg"></span>
+                        <span>20-200 ₽</span>
+                    </div>
+                    <ul class="service__dropdown dropdown-hidden" data-dropdown-mark>
+                        <li class="service__item">Матовое покрытие — 100 ₽</li>
+                        <li class="service__item">Френч (1 ноготь) — 50 ₽</li>
+                        <li class="service__item">Лунный (1 ноготь) — 20 ₽</li>
+                        <li class="service__item">Втирка (1 ноготь) — 40 ₽</li>
+                        <li class="service__item">Инкрустация стразами (1 шт.) — 50-300 ₽</li>
+                        <li class="service__item">Дизайн простой — 50-100 ₽</li>
+                        <li class="service__item">Дизайн сложный — 100-300 ₽</li>
+                        <li class="service__item">Градиент — 50 ₽</li>
+                        <li class="service__item">Мрамор — 50 ₽</li>
+                    </ul>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+            </ul>
+            <button class="service__request button-bordered">Записаться</button>
+        </div>
+        <div class="services__service service-hidden" data-service>
+            <img alt="Image" class="service__primary-image" src="assets/img/service-primary-1.png"/>
+            <img alt="Image" class="service__secondary-image" src="assets/img/service-secondary-1.png"/>
+            <ul class="service__catalog">
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Маникюр (аппаратный, комбинированный)</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Покрытие гелем Luxio, oniq</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие + маникюр + Покрытие гелем Luxio, oniq  </span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item-dropdown" data-dropdown>
+                    <div>
+                        <span>Снятие покрытия 4 <img alt="" src="assets/img/arrow.svg"></span>
+                        <span>20-200 ₽</span>
+                    </div>
+                    <ul class="service__dropdown dropdown-hidden" data-dropdown-mark>
+                        <li class="service__item">Матовое покрытие — 100 ₽</li>
+                        <li class="service__item">Френч (1 ноготь) — 50 ₽</li>
+                        <li class="service__item">Лунный (1 ноготь) — 20 ₽</li>
+                        <li class="service__item">Втирка (1 ноготь) — 40 ₽</li>
+                        <li class="service__item">Инкрустация стразами (1 шт.) — 50-300 ₽</li>
+                        <li class="service__item">Дизайн простой — 50-100 ₽</li>
+                        <li class="service__item">Дизайн сложный — 100-300 ₽</li>
+                        <li class="service__item">Градиент — 50 ₽</li>
+                        <li class="service__item">Мрамор — 50 ₽</li>
+                    </ul>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+                <li class="service__item">
+                    <span>Снятие покрытия</span>
+                    <span>200 ₽</span>
+                </li>
+            </ul>
+            <button class="service__request button-bordered">Записаться</button>
+        </div>
+    </section>
+
+    <section class="main__portfolio portfolio">
+        <div class="portfolio__title">Портфолио</div>
+        <div class="swiper portfolio__swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide portfolio__slide"><img alt="" src="assets/img/portfolio-1.jpg"></div>
+                <div class="swiper-slide portfolio__slide-instagram">
+                    <img alt="" src="assets/img/portfolio-2.png">
+                    <div>Больше работ можно найти<br>в нашем <a href="#">Instagram</a></div>
+                </div>
+                <div class="swiper-slide portfolio__slide"><img alt="" src="assets/img/portfolio-3.jpg"></div>
+                <div class="swiper-slide portfolio__slide"><img alt="" src="assets/img/portfolio-4.jpg"></div>
+                <div class="swiper-slide portfolio__slide"><img alt="" src="assets/img/portfolio-1.jpg"></div>
+                <div class="swiper-slide portfolio__slide-instagram">
+                    <img alt="" src="assets/img/portfolio-2.png">
+                    <div>Больше работ можно найти<br>в нашем <a href="#">Instagram</a></div>
+                </div>
+                <div class="swiper-slide portfolio__slide"><img alt="" src="assets/img/portfolio-3.jpg"></div>
+                <div class="swiper-slide portfolio__slide"><img alt="" src="assets/img/portfolio-4.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="main__surprise surprise">
+        <div class="surprise__image"><img alt="Surprise" src="assets/img/surprise.png"></div>
+        <div class="surprise__info">
+            <div class="surprise__title">Не знаете, <br>что подарить?</div>
+            <div class="surprise__description">Подарочный сертификат – это приятный сюрприз для Ваших близких и
+                идеальный подарок коллеге, который обязательно порадует и подарит массу положительных эмоций! <p>Вы
+                    можете оформить, как сертификат на бумажном носителе, так и в электронном виде.</p></div>
+            <div class="surprise__actions">
+                <button class="surprise__checkout button-bordered">Оформить</button>
+                <a class="surprise__more" href="#">Подробнее</a>
+            </div>
+        </div>
+    </section>
+    <section class="main__reviews reviews" id="reviews">
+        <div class="reviews__block">
+            <div class="reviews__title">
+                Мы <span>заботимся</span><br>о наших <span>клиентах</span>
+                <div>и они это <span>ценят</span></div>
+            </div>
+            <div class="swiper reviews__swiper">
+                <div class="swiper-wrapper reviews__wrapper">
+                    <div class="swiper-slide reviews__review review">
+                        <div class="review__name">Ольга Григорьева</div>
+                        <div class="review__meta">
+                            <div class="review__rating">★★★★★</div>
+                            <div class="review__date">6 мая</div>
+                        </div>
+                        <div class="review__text">Моя любимая студия! Удобное месторасположение, в 5 минутах от метро
+                            Чернышевская. Приятная атмосфера, все девочки очень профессиональные мастера своего дела!
+                            Очень приветливый администратор, хорошие фильмы и вкусный кофе!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <a href="#" class="reviews__public">Оставить отзыв</a>
+            </div>
+        </div>
+        <div class="reviews__image">
+            <img alt="Reviews" src="assets/img/reviews.jpg">
+        </div>
+    </section>
+    <section class="main__location location" id="locations">
+        <div class="location__title">Наши студии</div>
+        <ul class="location__list">
+            <li class="location__item">Xnails Центр</li>
+            <li class="location__item">Xnails Петроградка</li>
+        </ul>
+        <div class="location__content">
+            <div class="location__map">
+                <div style="position:relative;overflow:hidden;">
+                    <a href="https://yandex.ru/maps/org/gbpou_chelyabinskiy_radiotekhnicheskiy_tekhnikum/1233654449/?utm_medium=mapframe&utm_source=maps"
+                       style="color:#eee;font-size:12px;position:absolute;top:0px;">ГБПОУ Челябинский радиотехнический техникум</a>
+                    <a href="https://yandex.ru/maps/56/chelyabinsk/category/technical_college/184106244/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Техникум в Челябинске</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=61.381904%2C55.150613&mode=poi&poi%5Bpoint%5D=61.377194%2C55.151039&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1233654449&z=17" allowfullscreen="true" style="position:relative;"></iframe>
+                </div>
+            </div>
+            <div class="location__info">
+                <div class="location__description">
+                    Наша студия находится в Центральном районе г. Санкт-Петербург, в 5 минутах ходьбы от станции метро
+                    «Чернышевская»
+                    <br>
+                    <br>
+                    +7 911 924 63-45
+                    <br>
+                    <br>
+                    XNAILS Центр<br>
+                    Гродненский переулок, д. 7<br>
+                    м. Чернышевская, г. Санкт-Петербург
+                    <br>
+                    <br>
+                    Пн. — Вс.:10:00 — 22:00
+                </div>
+                <button class="location__request button-bordered">Записаться</button>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer container">
+    <div class="footer__content">
+        <div class="footer__socials">
+            <div class="footer__logo"><img src="assets/img/logotype.svg" alt="Xnails"></div>
+            <ul class="footer__links">
+                <li class="footer__link"><a href="#"><img src="assets/img/icon-instagram.svg" alt="Instagram"></a></li>
+                <li class="footer__link"><a href="#"><img src="assets/img/icon-vk.svg" alt="Vk"></a></li>
+                <li class="footer__link"><a href="#"><img src="assets/img/icon-facebook.svg" alt="Facebook"></a></li>
+                <li class="footer__link"><a href="#"><img src="assets/img/icon-mail.svg" alt="mail"></a></li>
+            </ul>
+        </div>
+        <div class="footer__page-list">
+            <ul class="footer__pages">
+                <li class="footer__page"><a href="#">О нас</a></li>
+                <li class="footer__page"><a href="#">Портфолио</a></li>
+                <li class="footer__page"><a href="#">Отзывы</a></li>
+                <li class="footer__page"><a href="#">Политика конфиденциальности</a></li>
+            </ul>
+            <ul class="footer__pages">
+                <li class="footer__page"><a href="#">Акции</a></li>
+                <li class="footer__page"><a href="#">Блог</a></li>
+                <li class="footer__page"><a href="#">Прайс</a></li>
+                <li class="footer__page"><a href="#">Студии</a></li>
+            </ul>
+        </div>
+        <div class="footer__discounts">
+            <div class="footer__discount">Узнавайте первым о новых акциях!</div>
+            <div class="footer__input"><input type="text" name="email" placeholder="Ваш email"></div>
+            <div class="footer__privacy">
+                <input type="checkbox" name="privacy" id="privacy">
+                <label for="privacy">Я соглашаюсь с условиями <a href="#">Политики конфиденциальности</a></label>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
